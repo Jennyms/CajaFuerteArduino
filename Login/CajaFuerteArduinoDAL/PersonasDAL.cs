@@ -85,6 +85,13 @@ namespace CajaFuerteArduinoDAL
                 xClave.InnerText = personas.Clave.ToString();
                 usuario.AppendChild(xClave);
 
+                XmlElement xEstado = doc.CreateElement("estado");
+                xEstado.InnerText = personas.Estado.ToString();
+                usuario.AppendChild(xEstado);
+
+                XmlElement xFecha = doc.CreateElement("fecha");
+                xFecha.InnerText = personas.Fecha.ToString();
+                usuario.AppendChild(xFecha);
 
                 return usuario;
             }

@@ -11,8 +11,8 @@ namespace CajaFuerteArduinoENL
         public int Cedula { get; set; }
         public string Nombre { get; set; }       
         public string Fecha { get; set; }
-        public int Clave { get; set; }
-        public int Intentos { get; set; }
+        public int Clave { get; set; }      
+        public string Estado { get; set; }
 
     }
 }

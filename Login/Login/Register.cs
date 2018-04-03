@@ -18,17 +18,21 @@ namespace Login
         private Personas persona;
         private PersonasBOL bol;
         private string ruta;
-
-
+        private string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
+        ///pin = pin.Remove(pin.Length - 1);
         public Register()
         {
             InitializeComponent();
             CenterToScreen();
+            
         }
 
         private void Register_Load(object sender, EventArgs e)
         {
-
+            ruta = "Usuarios.xml";
+            bol = new  PersonasBOL();
+            persona = new Personas();
+            bol.CrearArchivo(ruta, "usuario");
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -38,13 +42,16 @@ namespace Login
             principal.Show();
         }
 
-        private void Guardar()
+        public void Guardar()
         {
             try
             {
                 persona.Cedula = Convert.ToInt32(txtCedula.Text.Trim());
                 persona.Nombre = txtNombre.Text.Trim();
                 persona.Clave = Int32.Parse(txtClave.Text.Trim());
+                persona.Fecha = fechaActual;
+                persona.Estado = "Activo";
+                ruta = "Usuarios.xml";
                 bol.VerificarUsuario(persona, ruta);
 
             }
