@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaFuerteArduino", "Login\CajaFuerteArduino.csproj", "{C472DC41-B387-4489-B164-A2D46407AD55}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67050F04-9D5F-4577-9D0D-DEF7A1C0905F} = {67050F04-9D5F-4577-9D0D-DEF7A1C0905F}
+		{6824DAD4-7E89-4F06-BB91-D320B46953AE} = {6824DAD4-7E89-4F06-BB91-D320B46953AE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaFuerteArduinoENL", "CajaFuerteArduinoENL\CajaFuerteArduinoENL.csproj", "{67050F04-9D5F-4577-9D0D-DEF7A1C0905F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaFuerteArduinoBOL", "CajaFuerteArduinoBOL\CajaFuerteArduinoBOL.csproj", "{6824DAD4-7E89-4F06-BB91-D320B46953AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67050F04-9D5F-4577-9D0D-DEF7A1C0905F} = {67050F04-9D5F-4577-9D0D-DEF7A1C0905F}
+		{EC4C1419-1138-46B9-ABCF-1FEBF9450CB3} = {EC4C1419-1138-46B9-ABCF-1FEBF9450CB3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CajaFuerteArduinoDAL", "CajaFuerteArduinoDAL\CajaFuerteArduinoDAL.csproj", "{EC4C1419-1138-46B9-ABCF-1FEBF9450CB3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{67050F04-9D5F-4577-9D0D-DEF7A1C0905F} = {67050F04-9D5F-4577-9D0D-DEF7A1C0905F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C472DC41-B387-4489-B164-A2D46407AD55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C472DC41-B387-4489-B164-A2D46407AD55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C472DC41-B387-4489-B164-A2D46407AD55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C472DC41-B387-4489-B164-A2D46407AD55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67050F04-9D5F-4577-9D0D-DEF7A1C0905F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67050F04-9D5F-4577-9D0D-DEF7A1C0905F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67050F04-9D5F-4577-9D0D-DEF7A1C0905F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67050F04-9D5F-4577-9D0D-DEF7A1C0905F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6824DAD4-7E89-4F06-BB91-D320B46953AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6824DAD4-7E89-4F06-BB91-D320B46953AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6824DAD4-7E89-4F06-BB91-D320B46953AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6824DAD4-7E89-4F06-BB91-D320B46953AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4C1419-1138-46B9-ABCF-1FEBF9450CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4C1419-1138-46B9-ABCF-1FEBF9450CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4C1419-1138-46B9-ABCF-1FEBF9450CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4C1419-1138-46B9-ABCF-1FEBF9450CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C61FD27C-A7AA-447C-AEF4-F40A7A769CAD}
+	EndGlobalSection
+EndGlobal
