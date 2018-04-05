@@ -161,7 +161,7 @@ namespace CajaFuerteArduinoDAL
                 rutaXML = ruta;
                 doc.Load(rutaXML);
 
-                XmlNodeList listaUsuarios = doc.SelectNodes("Usuarios/usuario");
+                XmlNodeList listaUsuarios = doc.SelectNodes("usuario/Datosusuario");
 
                 XmlNode usuarios;
 
@@ -172,6 +172,8 @@ namespace CajaFuerteArduinoDAL
                     persona.Cedula = Convert.ToInt32(usuarios.SelectSingleNode("cedula").InnerText);
                     persona.Nombre = usuarios.SelectSingleNode("nombre").InnerText;
                     persona.Clave = Int32.Parse(usuarios.SelectSingleNode("clave").InnerText);
+                    persona.Estado = usuarios.SelectSingleNode("estado").InnerText;
+                    persona.Fecha = usuarios.SelectSingleNode("fecha").InnerText;
                   
                     personas.Add(persona);
                 }

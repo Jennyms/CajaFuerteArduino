@@ -16,20 +16,24 @@ namespace Login
     {
 
         private Personas persona;
-        private PersonasBOL bol;    
+        private PersonasBOL bol; 
         private string ruta;
-        
 
 
         public DatosUsuarios()
         {
             InitializeComponent();
             CenterToScreen();
+
         }
 
         private void CargarTabla()
         {
             dataGridView1.DataSource = bol.CargarTodo(ruta);
+            dataGridView1.Columns[0].Width = 125;
+            dataGridView1.Columns[1].Width = 125;
+            dataGridView1.Columns[2].Width = 125;
+            dataGridView1.Columns[3].Width = 125;
         }
 
         private void DatosUsuarios_Load(object sender, EventArgs e)
@@ -37,6 +41,7 @@ namespace Login
             persona = new Personas();
             bol = new PersonasBOL();
             ruta = "Usuarios.xml";
+            
             bol.CrearArchivo(ruta, "Usuarios");
             CargarTabla();
         }
@@ -67,10 +72,6 @@ namespace Login
             {
                 CargarTabla();
             }
-                
-            
         }
-
-
     }
 }
