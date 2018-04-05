@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\teclado.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safe-box-isolated-icon-vector-18800821.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
