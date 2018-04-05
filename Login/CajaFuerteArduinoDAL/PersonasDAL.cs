@@ -50,11 +50,11 @@ namespace CajaFuerteArduinoDAL
                         rutaXML = ruta;
                         doc.Load(rutaXML);
 
-                        XmlNode docen = CrearPersona(persona);
+                        XmlNode person = CrearPersona(persona);
 
                         XmlNode nodoRaiz = doc.DocumentElement;
 
-                        nodoRaiz.InsertAfter(docen, nodoRaiz.LastChild);
+                        nodoRaiz.InsertAfter(person, nodoRaiz.LastChild);
 
                         doc.Save(rutaXML);
                     }
@@ -71,7 +71,7 @@ namespace CajaFuerteArduinoDAL
         {
             try
             {
-                XmlNode usuario = doc.CreateElement("usuario");
+                XmlNode usuario = doc.CreateElement("Datosusuario");
 
                 XmlElement xCed = doc.CreateElement("cedula");
                 xCed.InnerText = personas.Cedula.ToString();
@@ -108,11 +108,11 @@ namespace CajaFuerteArduinoDAL
                 rutaXML = ruta;
                 doc.Load(rutaXML);
 
-                XmlNode docentes = doc.DocumentElement;
+                XmlNode personas = doc.DocumentElement;
 
-                XmlNodeList listaDocentes = doc.SelectNodes("Usuarios/usuario");
+                XmlNodeList listaPersonas = doc.SelectNodes("usuario/Datosusuario");
 
-                foreach (XmlNode item in listaDocentes)
+                foreach (XmlNode item in listaPersonas)
                 {
                     if (item.SelectSingleNode("clave").InnerText.Equals(clave.ToString()))
                     {
@@ -134,11 +134,11 @@ namespace CajaFuerteArduinoDAL
                 rutaXML = ruta;
                 doc.Load(rutaXML);
 
-                XmlNode docentes = doc.DocumentElement;
+                XmlNode personas = doc.DocumentElement;
 
-                XmlNodeList listaDocentes = doc.SelectNodes("Usuarios/usuario");
+                XmlNodeList listaPersonas = doc.SelectNodes("usuario/Datosusuario");
 
-                foreach (XmlNode item in listaDocentes)
+                foreach (XmlNode item in listaPersonas)
                 {
                     if (item.SelectSingleNode("cedula").InnerText.Equals(cedula))
                     {
