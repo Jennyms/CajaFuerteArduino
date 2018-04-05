@@ -45,11 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatosUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DatosUsuarios.Designer.cs">
       <DependentUpon>DatosUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion_Users.Designer.cs">
+      <DependentUpon>Informacion_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -65,8 +77,26 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unlock_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unlock_Users.Designer.cs">
+      <DependentUpon>Unlock_Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatosUsuarios.resx">
       <DependentUpon>DatosUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacion_Users.resx">
+      <DependentUpon>Informacion_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -83,6 +113,12 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unlock_Users.resx">
+      <DependentUpon>Unlock_Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
