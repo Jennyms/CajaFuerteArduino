@@ -55,10 +55,11 @@ namespace Login
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRegistro_Click(object sender, EventArgs e)
         {
-          
-           
+            this.Hide();
+            Register registro = new Register();
+            registro.Show();
         }
     }
 }

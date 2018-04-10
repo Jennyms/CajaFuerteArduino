@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,12 +84,6 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Unlock_Users.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Unlock_Users.Designer.cs">
-      <DependentUpon>Unlock_Users.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,9 +112,6 @@
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Unlock_Users.resx">
-      <DependentUpon>Unlock_Users.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,6 +130,10 @@
       <Project>{6824DAD4-7E89-4F06-BB91-D320B46953AE}</Project>
       <Name>CajaFuerteArduinoBOL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CajaFuerteArduinoDAL\CajaFuerteArduinoDAL.csproj">
+      <Project>{ec4c1419-1138-46b9-abcf-1febf9450cb3}</Project>
+      <Name>CajaFuerteArduinoDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CajaFuerteArduinoENL\CajaFuerteArduinoENL.csproj">
       <Project>{67050F04-9D5F-4577-9D0D-DEF7A1C0905F}</Project>
       <Name>CajaFuerteArduinoENL</Name>
@@ -150,7 +146,10 @@
     <None Include="Resources\teclado.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\safe-box-isolated-icon-vector-18800821.png" />
+    <None Include="Resources\icono_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_check1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\caja-fuerte %281%29.png" />

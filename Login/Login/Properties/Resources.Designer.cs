@@ -105,7 +105,7 @@ namespace Login.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap safe_box_isolated_icon_vector_18800821 {
             get {
-                object obj = ResourceManager.GetObject("safe-box-isolated-icon-vector-18800821", resourceCulture);
+                object obj = ResourceManager.GetObject("icono_error", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

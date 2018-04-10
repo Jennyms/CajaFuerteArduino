@@ -139,7 +139,7 @@
             this.btnNueve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNueve.Location = new System.Drawing.Point(144, 135);
             this.btnNueve.Name = "btnNueve";
-            this.btnNueve.Size = new System.Drawing.Size(51, 45);
+            this.btnNueve.Size = new System.Drawing.Size(68, 55);
             this.btnNueve.TabIndex = 13;
             this.btnNueve.Text = "9";
             this.btnNueve.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             this.btnSiete.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiete.Location = new System.Drawing.Point(20, 135);
             this.btnSiete.Name = "btnSiete";
-            this.btnSiete.Size = new System.Drawing.Size(48, 45);
+            this.btnSiete.Size = new System.Drawing.Size(64, 55);
             this.btnSiete.TabIndex = 11;
             this.btnSiete.Text = "7";
             this.btnSiete.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             this.btnCinco.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCinco.Location = new System.Drawing.Point(84, 85);
             this.btnCinco.Name = "btnCinco";
-            this.btnCinco.Size = new System.Drawing.Size(48, 44);
+            this.btnCinco.Size = new System.Drawing.Size(64, 54);
             this.btnCinco.TabIndex = 9;
             this.btnCinco.Text = "5";
             this.btnCinco.UseVisualStyleBackColor = true;
@@ -191,18 +191,21 @@
             // 
             // btnSeis
             // 
-            this.btnSeis.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeis.Location = new System.Drawing.Point(147, 85);
-            this.btnSeis.Name = "btnSeis";
-            this.btnSeis.Size = new System.Drawing.Size(48, 44);
-            this.btnSeis.TabIndex = 10;
-            this.btnSeis.Text = "6";
-            this.btnSeis.UseVisualStyleBackColor = true;
-            this.btnSeis.Click += new System.EventHandler(this.btnDos_Click);
+            this.btnRegistro.FlatAppearance.BorderSize = 0;
+            this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.Location = new System.Drawing.Point(3, 523);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(114, 35);
+            this.btnRegistro.TabIndex = 18;
+            this.btnRegistro.Text = "Registrarse";
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Login.Properties.Resources.if_safe_170241;
             this.ClientSize = new System.Drawing.Size(584, 580);
@@ -210,6 +213,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -233,7 +237,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRegistro;
     }
 }
 

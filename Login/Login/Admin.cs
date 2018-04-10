@@ -43,18 +43,6 @@ namespace Login
             panel2.Visible = true;
         }
 
-        private void btnDesbloquear_MouseHover(object sender, EventArgs e)
-        {
-            panel2.Visible = true;
-            panel2.Height = btnDesbloquear.Height;
-            panel2.Top = btnDesbloquear.Top;
-        }
-
-        private void btnDesbloquear_MouseLeave(object sender, EventArgs e)
-        {
-            panel2.Visible = true;
-        }
-
         private void btnReportes_MouseHover(object sender, EventArgs e)
         {
             panel2.Visible = true;
@@ -69,16 +57,13 @@ namespace Login
 
         private void btnInfo_users_Click(object sender, EventArgs e)
         {
-            InfoCarros(new Informacion_Users());
-        }
-
-        private void btnDesbloquear_Click(object sender, EventArgs e)
-        {
-            InfoCarros(new Unlock_Users());
+            //Fondo_Admin.Visible = false;
+            InfoCarros(new DatosUsuarios());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
+            //Fondo_Admin.Visible = false;
             InfoCarros(new Reportes());
         }
     }

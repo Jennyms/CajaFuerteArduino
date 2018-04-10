@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
+using System.Windows.Forms;
 
 
 namespace CajaFuerteArduinoDAL
@@ -93,6 +94,10 @@ namespace CajaFuerteArduinoDAL
                 xFecha.InnerText = personas.Fecha.ToString();
                 usuario.AppendChild(xFecha);
 
+                XmlElement xTipo = doc.CreateElement("tipo");
+                xTipo.InnerText = personas.Tipo.ToString();
+                usuario.AppendChild(xTipo);
+
                 return usuario;
             }
             catch (Exception ex)
@@ -157,6 +162,7 @@ namespace CajaFuerteArduinoDAL
             try
             {
                 List<Personas> personas = new List<Personas>();
+                personas.Clear();
                 Personas persona;
                 rutaXML = ruta;
                 doc.Load(rutaXML);
@@ -174,7 +180,7 @@ namespace CajaFuerteArduinoDAL
                     persona.Clave = Int32.Parse(usuarios.SelectSingleNode("clave").InnerText);
                     persona.Estado = usuarios.SelectSingleNode("estado").InnerText;
                     persona.Fecha = usuarios.SelectSingleNode("fecha").InnerText;
-                  
+                    persona.Tipo = usuarios.SelectSingleNode("tipo").InnerText;
                     personas.Add(persona);
                 }
                 return personas;
@@ -183,6 +189,32 @@ namespace CajaFuerteArduinoDAL
             {
                 throw new Exception("Error al cargar usuarios."+ex);
             }
+        }
+
+        public Label modificarPersona(Personas persona, string archivo)
+        {
+            Label mensaje = new Label();
+            doc.Load(archivo);
+
+            XmlElement datosPersona = doc.DocumentElement;
+
+            XmlNodeList listaPersona = doc.SelectNodes("usuario/Datosusuario");
+
+            XmlNode nueva_Persona = CrearPersona(persona);
+
+            foreach (XmlNode item in listaPersona)
+            {
+                if (item.FirstChild.InnerText == Convert.ToString(persona.Cedula))
+                {
+                    XmlNode nodoOld = item;
+                    datosPersona.ReplaceChild(nueva_Persona, nodoOld);
+
+                }
+            }
+            doc.Save(archivo);
+            mensaje.Text = "Se modifico con exito";
+            return mensaje;
+            //MessageBox.Show("Se modifico con exito", "EDICION", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
