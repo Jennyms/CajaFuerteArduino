@@ -63,9 +63,69 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja_fuerte__1_ {
+            get {
+                object obj = ResourceManager.GetObject("caja-fuerte (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Caja_fuerte_minqi {
+            get {
+                object obj = ResourceManager.GetObject("Caja-fuerte-minqi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_safe_17024 {
+            get {
+                object obj = ResourceManager.GetObject("if_safe_17024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_safe_170241 {
+            get {
+                object obj = ResourceManager.GetObject("if_safe_170241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap safe_box_isolated_icon_vector_18800821 {
             get {
                 object obj = ResourceManager.GetObject("safe-box-isolated-icon-vector-18800821", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap safe_box_isolated_icon_vector_188008212 {
+            get {
+                object obj = ResourceManager.GetObject("safe-box-isolated-icon-vector-188008212", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap safe_box_isolated_icon_vector_1880082123 {
+            get {
+                object obj = ResourceManager.GetObject("safe-box-isolated-icon-vector-1880082123", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +146,26 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap teclado_numerico {
             get {
                 object obj = ResourceManager.GetObject("teclado-numerico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teclado1 {
+            get {
+                object obj = ResourceManager.GetObject("teclado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teclado2 {
+            get {
+                object obj = ResourceManager.GetObject("teclado2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
