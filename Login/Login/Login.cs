@@ -13,7 +13,7 @@ namespace Login
     public partial class Login : Form
     {
         private String pin;
-        private int intentos = 3;
+        //private int intentos = 3;
         private string fechaActual= DateTime.Now.ToString("dd/MM/yyyy");
         private string horaActual =DateTime.Now.ToString("hh:mm:ss");
 

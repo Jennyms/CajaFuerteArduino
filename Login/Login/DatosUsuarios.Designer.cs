@@ -93,7 +93,7 @@
             // txtMensaje2
             // 
             this.txtMensaje2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMensaje2.Image = global::Login.Properties.Resources.icono_check;
+        
             this.txtMensaje2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtMensaje2.Location = new System.Drawing.Point(245, 390);
             this.txtMensaje2.Name = "txtMensaje2";
@@ -105,7 +105,7 @@
             // txtMensaje
             // 
             this.txtMensaje.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMensaje.Image = global::Login.Properties.Resources.icono_error;
+   
             this.txtMensaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtMensaje.Location = new System.Drawing.Point(245, 390);
             this.txtMensaje.Name = "txtMensaje";

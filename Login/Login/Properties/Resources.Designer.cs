@@ -83,6 +83,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_check {
+            get {
+                object obj = ResourceManager.GetObject("icono_check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_safe_17024 {
             get {
                 object obj = ResourceManager.GetObject("if_safe_17024", resourceCulture);
@@ -105,7 +115,7 @@ namespace Login.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap safe_box_isolated_icon_vector_18800821 {
             get {
-                object obj = ResourceManager.GetObject("icono_error", resourceCulture);
+                object obj = ResourceManager.GetObject("safe-box-isolated-icon-vector-18800821", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
