@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatosUsuarios));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
@@ -93,6 +94,7 @@
             // txtMensaje
             // 
             this.txtMensaje.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMensaje.Image = ((System.Drawing.Image)(resources.GetObject("txtMensaje.Image")));
             this.txtMensaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtMensaje.Location = new System.Drawing.Point(245, 390);
             this.txtMensaje.Name = "txtMensaje";
@@ -104,6 +106,7 @@
             // txtMensaje2
             // 
             this.txtMensaje2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMensaje2.Image = ((System.Drawing.Image)(resources.GetObject("txtMensaje2.Image")));
             this.txtMensaje2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtMensaje2.Location = new System.Drawing.Point(295, 390);
             this.txtMensaje2.Name = "txtMensaje2";
