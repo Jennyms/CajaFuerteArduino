@@ -108,9 +108,9 @@
             this.txtMensaje2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensaje2.Image = ((System.Drawing.Image)(resources.GetObject("txtMensaje2.Image")));
             this.txtMensaje2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtMensaje2.Location = new System.Drawing.Point(295, 390);
+            this.txtMensaje2.Location = new System.Drawing.Point(249, 390);
             this.txtMensaje2.Name = "txtMensaje2";
-            this.txtMensaje2.Size = new System.Drawing.Size(541, 39);
+            this.txtMensaje2.Size = new System.Drawing.Size(587, 39);
             this.txtMensaje2.TabIndex = 5;
             this.txtMensaje2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.txtMensaje2.Visible = false;
