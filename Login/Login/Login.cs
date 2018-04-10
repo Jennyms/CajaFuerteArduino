@@ -40,12 +40,18 @@ namespace Login
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (e.KeyChar == (char)Keys.Back)
-            {
-                this.textBox2.Text = string.Empty;
-                String cadena = "123456789";
-                int cantidad = 0; 
+            //if (e.KeyChar == (char)Keys.Back)
+            //{
+            //    this.textBox2.Text = string.Empty;
+            //    String cadena = "123456789";
+            //    int cantidad = 0; 
 
+            //}
+            if (!(char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
 
