@@ -41,16 +41,17 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRegistro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNueve
             // 
             this.btnNueve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNueve.Location = new System.Drawing.Point(161, 167);
+            this.btnNueve.Location = new System.Drawing.Point(215, 206);
+            this.btnNueve.Margin = new System.Windows.Forms.Padding(4);
             this.btnNueve.Name = "btnNueve";
-            this.btnNueve.Size = new System.Drawing.Size(51, 45);
+            this.btnNueve.Size = new System.Drawing.Size(68, 55);
             this.btnNueve.TabIndex = 13;
             this.btnNueve.Text = "9";
             this.btnNueve.UseVisualStyleBackColor = true;
@@ -59,9 +60,10 @@
             // btnOcho
             // 
             this.btnOcho.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOcho.Location = new System.Drawing.Point(95, 166);
+            this.btnOcho.Location = new System.Drawing.Point(127, 204);
+            this.btnOcho.Margin = new System.Windows.Forms.Padding(4);
             this.btnOcho.Name = "btnOcho";
-            this.btnOcho.Size = new System.Drawing.Size(48, 46);
+            this.btnOcho.Size = new System.Drawing.Size(64, 57);
             this.btnOcho.TabIndex = 12;
             this.btnOcho.Text = "8";
             this.btnOcho.UseVisualStyleBackColor = true;
@@ -70,9 +72,10 @@
             // btnSiete
             // 
             this.btnSiete.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiete.Location = new System.Drawing.Point(29, 167);
+            this.btnSiete.Location = new System.Drawing.Point(39, 206);
+            this.btnSiete.Margin = new System.Windows.Forms.Padding(4);
             this.btnSiete.Name = "btnSiete";
-            this.btnSiete.Size = new System.Drawing.Size(48, 45);
+            this.btnSiete.Size = new System.Drawing.Size(64, 55);
             this.btnSiete.TabIndex = 11;
             this.btnSiete.Text = "7";
             this.btnSiete.UseVisualStyleBackColor = true;
@@ -81,9 +84,10 @@
             // btnSeis
             // 
             this.btnSeis.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeis.Location = new System.Drawing.Point(161, 101);
+            this.btnSeis.Location = new System.Drawing.Point(215, 124);
+            this.btnSeis.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeis.Name = "btnSeis";
-            this.btnSeis.Size = new System.Drawing.Size(48, 44);
+            this.btnSeis.Size = new System.Drawing.Size(64, 54);
             this.btnSeis.TabIndex = 10;
             this.btnSeis.Text = "6";
             this.btnSeis.UseVisualStyleBackColor = true;
@@ -92,9 +96,10 @@
             // btnCinco
             // 
             this.btnCinco.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCinco.Location = new System.Drawing.Point(95, 101);
+            this.btnCinco.Location = new System.Drawing.Point(127, 124);
+            this.btnCinco.Margin = new System.Windows.Forms.Padding(4);
             this.btnCinco.Name = "btnCinco";
-            this.btnCinco.Size = new System.Drawing.Size(48, 44);
+            this.btnCinco.Size = new System.Drawing.Size(64, 54);
             this.btnCinco.TabIndex = 9;
             this.btnCinco.Text = "5";
             this.btnCinco.UseVisualStyleBackColor = true;
@@ -103,9 +108,10 @@
             // btnCuatro
             // 
             this.btnCuatro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuatro.Location = new System.Drawing.Point(29, 101);
+            this.btnCuatro.Location = new System.Drawing.Point(39, 124);
+            this.btnCuatro.Margin = new System.Windows.Forms.Padding(4);
             this.btnCuatro.Name = "btnCuatro";
-            this.btnCuatro.Size = new System.Drawing.Size(48, 44);
+            this.btnCuatro.Size = new System.Drawing.Size(64, 54);
             this.btnCuatro.TabIndex = 8;
             this.btnCuatro.Text = "4";
             this.btnCuatro.UseVisualStyleBackColor = true;
@@ -114,9 +120,10 @@
             // btnTres
             // 
             this.btnTres.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTres.Location = new System.Drawing.Point(161, 34);
+            this.btnTres.Location = new System.Drawing.Point(215, 42);
+            this.btnTres.Margin = new System.Windows.Forms.Padding(4);
             this.btnTres.Name = "btnTres";
-            this.btnTres.Size = new System.Drawing.Size(48, 44);
+            this.btnTres.Size = new System.Drawing.Size(64, 54);
             this.btnTres.TabIndex = 7;
             this.btnTres.Text = "3";
             this.btnTres.UseVisualStyleBackColor = true;
@@ -125,9 +132,10 @@
             // btnDos
             // 
             this.btnDos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDos.Location = new System.Drawing.Point(95, 34);
+            this.btnDos.Location = new System.Drawing.Point(127, 42);
+            this.btnDos.Margin = new System.Windows.Forms.Padding(4);
             this.btnDos.Name = "btnDos";
-            this.btnDos.Size = new System.Drawing.Size(48, 44);
+            this.btnDos.Size = new System.Drawing.Size(64, 54);
             this.btnDos.TabIndex = 6;
             this.btnDos.Text = "2";
             this.btnDos.UseVisualStyleBackColor = true;
@@ -136,9 +144,10 @@
             // btnUno
             // 
             this.btnUno.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUno.Location = new System.Drawing.Point(29, 34);
+            this.btnUno.Location = new System.Drawing.Point(39, 42);
+            this.btnUno.Margin = new System.Windows.Forms.Padding(4);
             this.btnUno.Name = "btnUno";
-            this.btnUno.Size = new System.Drawing.Size(48, 44);
+            this.btnUno.Size = new System.Drawing.Size(64, 54);
             this.btnUno.TabIndex = 5;
             this.btnUno.Text = "1";
             this.btnUno.UseVisualStyleBackColor = true;
@@ -146,16 +155,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 32);
+            this.textBox1.Location = new System.Drawing.Point(125, 39);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
+            this.textBox1.Size = new System.Drawing.Size(261, 22);
             this.textBox1.TabIndex = 15;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(94, 68);
+            this.textBox2.Location = new System.Drawing.Point(125, 84);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
+            this.textBox2.Size = new System.Drawing.Size(261, 22);
             this.textBox2.TabIndex = 16;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
@@ -172,41 +183,48 @@
             this.panel1.Controls.Add(this.btnOcho);
             this.panel1.Controls.Add(this.btnCinco);
             this.panel1.Controls.Add(this.btnSeis);
-            this.panel1.Location = new System.Drawing.Point(94, 113);
+            this.panel1.Location = new System.Drawing.Point(125, 139);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 313);
+            this.panel1.Size = new System.Drawing.Size(320, 385);
             this.panel1.TabIndex = 17;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(95, 234);
+            this.button1.Location = new System.Drawing.Point(127, 288);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.Size = new System.Drawing.Size(64, 55);
             this.button1.TabIndex = 14;
             this.button1.Text = "0";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnDos_Click);
             // 
-            // button2
+            // btnRegistro
             // 
-            this.button2.Location = new System.Drawing.Point(2, 431);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnRegistro.FlatAppearance.BorderSize = 0;
+            this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.Location = new System.Drawing.Point(3, 523);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(114, 35);
+            this.btnRegistro.TabIndex = 18;
+            this.btnRegistro.Text = "Registrarse";
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 453);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(541, 558);
+            this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -230,7 +248,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRegistro;
     }
 }
 

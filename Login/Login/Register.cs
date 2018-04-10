@@ -44,13 +44,23 @@ namespace Login
 
         public void Guardar()
         {
+            string tipo = "";
             try
             {
+                if (BoxAdministrador.Checked)
+                {
+                    tipo = "T";
+                }
+                else
+                {
+                    tipo = "U";
+                }
                 persona.Cedula = Convert.ToInt32(txtCedula.Text.Trim());
                 persona.Nombre = txtNombre.Text.Trim();
                 persona.Clave = Int32.Parse(txtClave.Text.Trim());
                 persona.Fecha = fechaActual;
-                persona.Estado = "Activo";
+                persona.Estado = "Activo";//Bloqueado
+                persona.Tipo = tipo;
                 ruta = "Usuarios.xml";
                 bol.VerificarUsuario(persona, ruta);
 

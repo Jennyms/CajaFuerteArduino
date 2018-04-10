@@ -28,32 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
-            this.btnDesbloquear = new System.Windows.Forms.Button();
             this.btnInfo_users = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Informacion_Users = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.Informacion_Users = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Fondo_Admin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.Informacion_Users.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnReportes);
-            this.panel1.Controls.Add(this.btnDesbloquear);
             this.panel1.Controls.Add(this.btnInfo_users);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 510);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel2.Location = new System.Drawing.Point(3, 131);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(16, 67);
+            this.panel2.TabIndex = 0;
             // 
             // btnReportes
             // 
@@ -61,7 +71,7 @@
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Location = new System.Drawing.Point(12, 260);
+            this.btnReportes.Location = new System.Drawing.Point(12, 204);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(145, 67);
             this.btnReportes.TabIndex = 3;
@@ -71,29 +81,13 @@
             this.btnReportes.MouseLeave += new System.EventHandler(this.btnReportes_MouseLeave);
             this.btnReportes.MouseHover += new System.EventHandler(this.btnReportes_MouseHover);
             // 
-            // btnDesbloquear
-            // 
-            this.btnDesbloquear.FlatAppearance.BorderSize = 0;
-            this.btnDesbloquear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesbloquear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesbloquear.ForeColor = System.Drawing.Color.White;
-            this.btnDesbloquear.Location = new System.Drawing.Point(12, 187);
-            this.btnDesbloquear.Name = "btnDesbloquear";
-            this.btnDesbloquear.Size = new System.Drawing.Size(148, 67);
-            this.btnDesbloquear.TabIndex = 2;
-            this.btnDesbloquear.Text = "Desbloquear Users";
-            this.btnDesbloquear.UseVisualStyleBackColor = true;
-            this.btnDesbloquear.Click += new System.EventHandler(this.btnDesbloquear_Click);
-            this.btnDesbloquear.MouseLeave += new System.EventHandler(this.btnDesbloquear_MouseLeave);
-            this.btnDesbloquear.MouseHover += new System.EventHandler(this.btnDesbloquear_MouseHover);
-            // 
             // btnInfo_users
             // 
             this.btnInfo_users.FlatAppearance.BorderSize = 0;
             this.btnInfo_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfo_users.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo_users.ForeColor = System.Drawing.Color.White;
-            this.btnInfo_users.Location = new System.Drawing.Point(12, 114);
+            this.btnInfo_users.Location = new System.Drawing.Point(12, 131);
             this.btnInfo_users.Name = "btnInfo_users";
             this.btnInfo_users.Size = new System.Drawing.Size(148, 67);
             this.btnInfo_users.TabIndex = 1;
@@ -105,11 +99,11 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(-4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 78);
+            this.label1.Size = new System.Drawing.Size(124, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,27 +112,12 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel3.Controls.Add(this.btnRegresar);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(160, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(967, 34);
             this.panel3.TabIndex = 1;
-            // 
-            // Informacion_Users
-            // 
-            this.Informacion_Users.BackColor = System.Drawing.Color.Silver;
-            this.Informacion_Users.Location = new System.Drawing.Point(160, 35);
-            this.Informacion_Users.Name = "Informacion_Users";
-            this.Informacion_Users.Size = new System.Drawing.Size(967, 472);
-            this.Informacion_Users.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel2.Location = new System.Drawing.Point(3, 114);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(16, 67);
-            this.panel2.TabIndex = 0;
             // 
             // btnRegresar
             // 
@@ -155,6 +134,32 @@
             this.btnRegresar.Text = "X";
             this.btnRegresar.UseVisualStyleBackColor = true;
             // 
+            // Informacion_Users
+            // 
+            this.Informacion_Users.BackColor = System.Drawing.Color.Silver;
+            this.Informacion_Users.Controls.Add(this.Fondo_Admin);
+            this.Informacion_Users.Location = new System.Drawing.Point(160, 35);
+            this.Informacion_Users.Name = "Informacion_Users";
+            this.Informacion_Users.Size = new System.Drawing.Size(967, 472);
+            this.Informacion_Users.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 128);
+            this.label2.TabIndex = 4;
+            // 
+            // Fondo_Admin
+            // 
+            this.Fondo_Admin.BackColor = System.Drawing.Color.White;
+            this.Fondo_Admin.Image = ((System.Drawing.Image)(resources.GetObject("Fondo_Admin.Image")));
+            this.Fondo_Admin.Location = new System.Drawing.Point(0, 0);
+            this.Fondo_Admin.Name = "Fondo_Admin";
+            this.Fondo_Admin.Size = new System.Drawing.Size(967, 472);
+            this.Fondo_Admin.TabIndex = 0;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,6 +174,7 @@
             this.Text = "Admin";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.Informacion_Users.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -177,12 +183,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnDesbloquear;
         private System.Windows.Forms.Button btnInfo_users;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel Informacion_Users;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Fondo_Admin;
     }
 }

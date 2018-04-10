@@ -13,6 +13,7 @@ namespace CajaFuerteArduinoENL
         public string Fecha { get; set; }
         public int Clave { get; set; }      
         public string Estado { get; set; }
+        public string Tipo { get; set; }
 
     }
 }
