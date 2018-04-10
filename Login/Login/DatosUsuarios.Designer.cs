@@ -34,8 +34,8 @@
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tiempoMensaje = new System.Windows.Forms.Timer(this.components);
-            this.txtMensaje2 = new System.Windows.Forms.Label();
             this.txtMensaje = new System.Windows.Forms.Label();
+            this.txtMensaje2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,22 +90,9 @@
             // 
             this.tiempoMensaje.Interval = 10;
             // 
-            // txtMensaje2
-            // 
-            this.txtMensaje2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        
-            this.txtMensaje2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtMensaje2.Location = new System.Drawing.Point(245, 390);
-            this.txtMensaje2.Name = "txtMensaje2";
-            this.txtMensaje2.Size = new System.Drawing.Size(591, 39);
-            this.txtMensaje2.TabIndex = 5;
-            this.txtMensaje2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.txtMensaje2.Visible = false;
-            // 
             // txtMensaje
             // 
             this.txtMensaje.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-   
             this.txtMensaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtMensaje.Location = new System.Drawing.Point(245, 390);
             this.txtMensaje.Name = "txtMensaje";
@@ -113,6 +100,17 @@
             this.txtMensaje.TabIndex = 4;
             this.txtMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.txtMensaje.Visible = false;
+            // 
+            // txtMensaje2
+            // 
+            this.txtMensaje2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMensaje2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtMensaje2.Location = new System.Drawing.Point(295, 390);
+            this.txtMensaje2.Name = "txtMensaje2";
+            this.txtMensaje2.Size = new System.Drawing.Size(541, 39);
+            this.txtMensaje2.TabIndex = 5;
+            this.txtMensaje2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtMensaje2.Visible = false;
             // 
             // DatosUsuarios
             // 
