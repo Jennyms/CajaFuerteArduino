@@ -28,46 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-    
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnUno = new System.Windows.Forms.Button();
             this.btnDos = new System.Windows.Forms.Button();
             this.btnTres = new System.Windows.Forms.Button();
-            this.btnNueve = new System.Windows.Forms.Button();
-            this.btnCuatro = new System.Windows.Forms.Button();
             this.btnSiete = new System.Windows.Forms.Button();
+            this.btnCuatro = new System.Windows.Forms.Button();
+            this.btnNueve = new System.Windows.Forms.Button();
             this.btnOcho = new System.Windows.Forms.Button();
             this.btnCinco = new System.Windows.Forms.Button();
             this.btnSeis = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtCedula
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtCedula.Location = new System.Drawing.Point(149, 101);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(167, 22);
+            this.txtCedula.TabIndex = 15;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 20);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            // 
-            // button2
-            // 
-
+            this.txtPassword.Location = new System.Drawing.Point(149, 127);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(167, 22);
+            this.txtPassword.TabIndex = 16;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-           
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnUno);
             this.panel1.Controls.Add(this.btnDos);
@@ -78,7 +74,7 @@
             this.panel1.Controls.Add(this.btnOcho);
             this.panel1.Controls.Add(this.btnCinco);
             this.panel1.Controls.Add(this.btnSeis);
-            this.panel1.Location = new System.Drawing.Point(239, 173);
+            this.panel1.Location = new System.Drawing.Point(149, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 263);
             this.panel1.TabIndex = 17;
@@ -127,16 +123,16 @@
             this.btnTres.UseVisualStyleBackColor = true;
             this.btnTres.Click += new System.EventHandler(this.btnDos_Click);
             // 
-            // btnNueve
+            // btnSiete
             // 
-            this.btnNueve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNueve.Location = new System.Drawing.Point(144, 135);
-            this.btnNueve.Name = "btnNueve";
-            this.btnNueve.Size = new System.Drawing.Size(68, 55);
-            this.btnNueve.TabIndex = 13;
-            this.btnNueve.Text = "9";
-            this.btnNueve.UseVisualStyleBackColor = true;
-            this.btnNueve.Click += new System.EventHandler(this.btnDos_Click);
+            this.btnSiete.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiete.Location = new System.Drawing.Point(20, 135);
+            this.btnSiete.Name = "btnSiete";
+            this.btnSiete.Size = new System.Drawing.Size(64, 55);
+            this.btnSiete.TabIndex = 11;
+            this.btnSiete.Text = "7";
+            this.btnSiete.UseVisualStyleBackColor = true;
+            this.btnSiete.Click += new System.EventHandler(this.btnDos_Click);
             // 
             // btnCuatro
             // 
@@ -149,16 +145,16 @@
             this.btnCuatro.UseVisualStyleBackColor = true;
             this.btnCuatro.Click += new System.EventHandler(this.btnDos_Click);
             // 
-            // btnSiete
+            // btnNueve
             // 
-            this.btnSiete.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiete.Location = new System.Drawing.Point(20, 135);
-            this.btnSiete.Name = "btnSiete";
-            this.btnSiete.Size = new System.Drawing.Size(64, 55);
-            this.btnSiete.TabIndex = 11;
-            this.btnSiete.Text = "7";
-            this.btnSiete.UseVisualStyleBackColor = true;
-            this.btnSiete.Click += new System.EventHandler(this.btnDos_Click);
+            this.btnNueve.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNueve.Location = new System.Drawing.Point(144, 135);
+            this.btnNueve.Name = "btnNueve";
+            this.btnNueve.Size = new System.Drawing.Size(68, 55);
+            this.btnNueve.TabIndex = 13;
+            this.btnNueve.Text = "9";
+            this.btnNueve.UseVisualStyleBackColor = true;
+            this.btnNueve.Click += new System.EventHandler(this.btnDos_Click);
             // 
             // btnOcho
             // 
@@ -184,18 +180,47 @@
             // 
             // btnSeis
             // 
-          
+            this.btnSeis.Location = new System.Drawing.Point(0, 0);
+            this.btnSeis.Name = "btnSeis";
+            this.btnSeis.Size = new System.Drawing.Size(75, 23);
+            this.btnSeis.TabIndex = 15;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(12, 519);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(101, 38);
+            this.btnRegistrar.TabIndex = 18;
+            this.btnRegistrar.Text = "Registrarse";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.FlatAppearance.BorderSize = 0;
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Location = new System.Drawing.Point(119, 519);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(112, 38);
+            this.btnIngresar.TabIndex = 19;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        
             this.ClientSize = new System.Drawing.Size(584, 580);
-      
+            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtCedula);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Form1";
@@ -216,11 +241,12 @@
         private System.Windows.Forms.Button btnTres;
         private System.Windows.Forms.Button btnDos;
         private System.Windows.Forms.Button btnUno;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-     
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnIngresar;
     }
 }
 

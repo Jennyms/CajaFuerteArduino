@@ -28,7 +28,7 @@ namespace Login
             try
             {
                pin += ((Button)sender).Text;
-                textBox2.Text = pin;
+                txtPassword.Text = pin;
 
             }
             catch (Exception ex)
@@ -55,11 +55,26 @@ namespace Login
             }
         }
 
+        private void Ingresar()
+        {
+            
+        }
+
         private void btnRegistro_Click(object sender, EventArgs e)
         {
             this.Hide();
             Register registro = new Register();
             registro.Show();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Ingresar();
         }
     }
 }

@@ -57,14 +57,19 @@ namespace Login
 
         private void btnInfo_users_Click(object sender, EventArgs e)
         {
-            //Fondo_Admin.Visible = false;
             InfoCarros(new DatosUsuarios());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            //Fondo_Admin.Visible = false;
             InfoCarros(new Reportes());
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login regresar = new Login();
+            regresar.Show();
         }
     }
 }

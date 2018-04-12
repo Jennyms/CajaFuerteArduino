@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnInfo_users = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.Informacion_Users = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.Fondo_Admin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -56,6 +56,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 510);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 128);
+            this.label2.TabIndex = 4;
             // 
             // panel2
             // 
@@ -133,6 +141,7 @@
             this.btnRegresar.TabIndex = 0;
             this.btnRegresar.Text = "X";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // Informacion_Users
             // 
@@ -142,14 +151,6 @@
             this.Informacion_Users.Name = "Informacion_Users";
             this.Informacion_Users.Size = new System.Drawing.Size(967, 472);
             this.Informacion_Users.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 128);
-            this.label2.TabIndex = 4;
             // 
             // Fondo_Admin
             // 
