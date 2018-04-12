@@ -131,34 +131,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\teclado-numerico.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\teclado.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\caja-fuerte %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Caja-fuerte-minqi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\safe-box-isolated-icon-vector-188008212.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\safe-box-isolated-icon-vector-1880082123.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_safe_17024.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_safe_170241.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\teclado1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\teclado2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icono_error.png" />
