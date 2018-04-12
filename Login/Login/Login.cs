@@ -61,5 +61,10 @@ namespace Login
             Register registro = new Register();
             registro.Show();
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
