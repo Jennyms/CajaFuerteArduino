@@ -106,7 +106,7 @@ namespace CajaFuerteArduinoDAL
             }
         }
 
-        private bool VerificarClave(int clave, string ruta)
+        public bool VerificarClave(int clave, string ruta)
         {
             try
             {
@@ -132,7 +132,7 @@ namespace CajaFuerteArduinoDAL
             }
         }
 
-        private bool VerificarSiEsta(string cedula, string ruta)
+        public bool VerificarSiEsta(string cedula, string ruta)
         {
             try
             {
@@ -146,7 +146,7 @@ namespace CajaFuerteArduinoDAL
                 foreach (XmlNode item in listaPersonas)
                 {
                     if (item.SelectSingleNode("cedula").InnerText.Equals(cedula))
-                    {
+                    { 
                         throw new Exception("El usuario ya existe.");
                     }
                 }
@@ -216,5 +216,5 @@ namespace CajaFuerteArduinoDAL
             return mensaje;
             //MessageBox.Show("Se modifico con exito", "EDICION", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-    }
+    }  
 }

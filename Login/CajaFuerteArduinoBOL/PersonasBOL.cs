@@ -43,5 +43,15 @@ namespace CajaFuerteArduinoBOL
             }
         }
 
+        public bool ingresar(Personas persona,string ruta)
+        {
+            bool ingreso = false;
+            if (dal.VerificarSiEsta(Convert.ToString(persona.Cedula), ruta).Equals(true) && dal.VerificarClave(persona.Clave, ruta).Equals(true))
+            {
+                ingreso = true;
+            }
+           
+            return ingreso;
+        }
     }
 }
