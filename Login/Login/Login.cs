@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CajaFuerteArduinoENL;
+using CajaFuerteArduinoBOL;
 
 namespace Login
 {
@@ -14,9 +16,11 @@ namespace Login
     {
         private String pin;
         //private int intentos = 3;
+        private Personas persona;
+        private PersonasBOL bol;
         private string fechaActual= DateTime.Now.ToString("dd/MM/yyyy");
         private string horaActual =DateTime.Now.ToString("hh:mm:ss");
-
+        private string ruta = "Usuarios.xml";
 
         public Login()
         {
@@ -55,9 +59,28 @@ namespace Login
             }
         }
 
+        private void IngresarVentana()
+        {
+            bool valor = false;
+            persona.Cedula = Convert.ToInt32(txtCedula.Text);
+            persona.Clave = Convert.ToInt32(txtPassword.Text);
+            valor = bol.ingresar(persona, ruta);
+
+            if (valor.Equals(true))
+            {
+                this.Hide();
+                Admin administrador = new Admin();
+                administrador.Show();
+            }
+            else
+            {
+                MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
+            }
+        }
+
         private void Ingresar()
         {
-            
+            IngresarVentana();
         }
 
         private void btnRegistro_Click(object sender, EventArgs e)
@@ -67,14 +90,22 @@ namespace Login
             registro.Show();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void btnIngresar_Click_1(object sender, EventArgs e)
         {
             Ingresar();
+        }
+
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Register registrar = new Register();
+            registrar.Show();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            persona = new Personas();
+            bol = new PersonasBOL();
         }
     }
 }

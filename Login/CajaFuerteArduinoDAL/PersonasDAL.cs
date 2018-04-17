@@ -216,5 +216,47 @@ namespace CajaFuerteArduinoDAL
             return mensaje;
             //MessageBox.Show("Se modifico con exito", "EDICION", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public bool VerificarUser(Personas persona, string ruta)
+        {
+            bool valor = false;
+            string tipo = "";
+            try
+            {
+                rutaXML = ruta;
+                doc.Load(rutaXML);
+
+                XmlNode personas = doc.DocumentElement;
+
+                XmlNodeList listaPersonas = doc.SelectNodes("usuario/Datosusuario");
+
+                foreach (XmlNode item in listaPersonas)
+                {
+                    if (item.SelectSingleNode("cedula").InnerText == Convert.ToString(persona.Cedula) && item.SelectSingleNode("clave").InnerText == Convert.ToString(persona.Clave))
+                    {
+                            tipo = item.SelectSingleNode("tipo").InnerText;
+                    }
+                }
+
+                if (tipo.Equals("T"))
+                {
+                    valor = true;
+                }
+                else if (tipo.Equals("U"))
+                {
+                    valor = false;
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña invalida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(""+e , "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return valor;
+        }
     }  
 }
