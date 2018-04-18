@@ -9,22 +9,35 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CajaFuerteArduinoENL;
 using CajaFuerteArduinoBOL;
+using CajaFuerteArduinoDAL;
 
 namespace Login
 {
     public partial class Login : Form
     {
+        List<Personas> datosUser = new List<Personas>();
         private String pin;
-        //private int intentos = 3;
+        private int intentos = 0;
         private Personas persona;
         private PersonasBOL bol;
+        private PersonasDAL dal;
         private string fechaActual= DateTime.Now.ToString("dd/MM/yyyy");
         private string horaActual =DateTime.Now.ToString("hh:mm:ss");
         private string ruta = "Usuarios.xml";
+        private string ruta2 = "Intentos.xml";
 
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            persona = new Personas();
+            bol = new PersonasBOL();
+            dal = new PersonasDAL();
+
+            bol.CrearArchivo(ruta2, "IntentosUser");
         }
 
         private void btnDos_Click(object sender, EventArgs e)
@@ -61,21 +74,89 @@ namespace Login
 
         private void IngresarVentana()
         {
-            bool valor = false;
-            persona.Cedula = Convert.ToInt32(txtCedula.Text);
-            persona.Clave = Convert.ToInt32(txtPassword.Text);
-            valor = bol.ingresar(persona, ruta);
+            try
+            {
+                string valor = "";
+                bool estado = false;
+                persona.Cedula = Convert.ToInt32(txtCedula.Text);
+                string cedula = Convert.ToString(persona.Cedula);
+                persona.Clave = Convert.ToInt32(txtPassword.Text);
 
-            if (valor.Equals(true))
-            {
-                this.Hide();
-                Admin administrador = new Admin();
-                administrador.Show();
+
+                string fecha = DateTime.Today.ToString("dd/MM/yyyy");
+                string hora = DateTime.Now.ToLongTimeString();
+
+                estado = dal.VerificarEstado(cedula, ruta);
+
+                if (estado.Equals(true))
+                {
+
+                    valor = bol.ingresar(persona, ruta);
+
+                    if (intentos <= 2)
+                    {
+                        intentos += 1;
+
+                        if (valor.Equals("A"))
+                        {
+                            registroIntentos(persona, fecha, hora);
+
+                            this.Hide();
+                            Admin administrador = new Admin();
+                            administrador.Show();
+                        }
+                        else if (valor.Equals("U"))
+                        {
+                            registroIntentos(persona, fecha, hora);
+
+                            MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
+                        }
+                        else if (valor.Equals("N"))
+                        {
+                            bool verificar = dal.VerificarSiEsta(cedula, ruta);
+
+                            if (verificar.Equals(true))
+                            {
+                                registroIntentos(persona, fecha, hora);
+                            }
+
+                            MessageBox.Show("Usuario o Contraseña invalida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        datosUser = bol.CargarTodo(ruta);
+                        for (int x = 0; x < datosUser.Count; x++)
+                        {
+                            persona = datosUser[x];
+                            if (persona.Cedula.Equals(Convert.ToInt32(cedula)))
+                            {
+                                persona = datosUser[x];
+                                persona.Estado = "Bloqueado";
+                                break;
+                            }
+                        }
+
+                        dal.modificarPersona(persona, "Usuarios.xml");
+                        intentos = 0;
+
+                        MessageBox.Show("Usuario bloqueado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario se encuentra bloqueado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
+                MessageBox.Show("No deben quedar espacios vacios", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public void registroIntentos(Personas persona, string fecha, string hora)
+        {
+
         }
 
         private void Ingresar()
@@ -102,10 +183,9 @@ namespace Login
             registrar.Show();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            persona = new Personas();
-            bol = new PersonasBOL();
+            Application.Exit();
         }
     }
 }

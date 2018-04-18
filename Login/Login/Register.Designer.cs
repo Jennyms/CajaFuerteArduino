@@ -45,10 +45,12 @@
             // BoxAdministrador
             // 
             this.BoxAdministrador.AutoSize = true;
-            this.BoxAdministrador.Location = new System.Drawing.Point(292, 62);
-            this.BoxAdministrador.Margin = new System.Windows.Forms.Padding(2);
+            this.BoxAdministrador.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxAdministrador.ForeColor = System.Drawing.Color.White;
+            this.BoxAdministrador.Location = new System.Drawing.Point(383, 74);
+            this.BoxAdministrador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BoxAdministrador.Name = "BoxAdministrador";
-            this.BoxAdministrador.Size = new System.Drawing.Size(89, 17);
+            this.BoxAdministrador.Size = new System.Drawing.Size(125, 23);
             this.BoxAdministrador.TabIndex = 17;
             this.BoxAdministrador.Text = "Administrador";
             this.BoxAdministrador.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,86 +58,94 @@
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistro.Location = new System.Drawing.Point(145, 213);
-            this.btnRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.btnRegistro.FlatAppearance.BorderSize = 0;
+            this.btnRegistro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.btnRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(75)))), ((int)(((byte)(61)))));
+            this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistro.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnRegistro.Location = new System.Drawing.Point(139, 262);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Size = new System.Drawing.Size(76, 26);
+            this.btnRegistro.Size = new System.Drawing.Size(138, 36);
             this.btnRegistro.TabIndex = 16;
             this.btnRegistro.Text = "Registrar";
-            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.UseVisualStyleBackColor = false;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(104, 150);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClave.Location = new System.Drawing.Point(139, 185);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(170, 23);
+            this.txtClave.Size = new System.Drawing.Size(225, 27);
             this.txtClave.TabIndex = 15;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(104, 104);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(139, 128);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(170, 23);
+            this.txtNombre.Size = new System.Drawing.Size(225, 27);
             this.txtNombre.TabIndex = 14;
             // 
             // txtCedula
             // 
             this.txtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(104, 57);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCedula.Location = new System.Drawing.Point(139, 70);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(170, 23);
+            this.txtCedula.Size = new System.Drawing.Size(225, 27);
             this.txtCedula.TabIndex = 13;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 152);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 17);
+            this.label4.Size = new System.Drawing.Size(121, 27);
             this.label4.TabIndex = 12;
             this.label4.Text = "Contraseña";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 108);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(16, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.Size = new System.Drawing.Size(100, 27);
             this.label3.TabIndex = 11;
             this.label3.Text = "Nombre";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 63);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(16, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.Size = new System.Drawing.Size(90, 27);
             this.label2.TabIndex = 10;
             this.label2.Text = "Cedula";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 31);
+            this.panel1.Size = new System.Drawing.Size(515, 38);
             this.panel1.TabIndex = 9;
             // 
             // btnCerrar
@@ -143,10 +153,10 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(343, 0);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Location = new System.Drawing.Point(468, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(38, 31);
+            this.btnCerrar.Size = new System.Drawing.Size(44, 34);
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.Text = "X";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -156,19 +166,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTER";
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 276);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(515, 340);
             this.ControlBox = false;
             this.Controls.Add(this.BoxAdministrador);
             this.Controls.Add(this.btnRegistro);
@@ -179,6 +189,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Register";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.Register_Load);

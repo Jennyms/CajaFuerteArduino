@@ -45,41 +45,48 @@
             this.btnSeis = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 82);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 23);
+            this.label2.Size = new System.Drawing.Size(92, 28);
             this.label2.TabIndex = 28;
             this.label2.Text = "Clave";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 28);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 23);
+            this.label1.Size = new System.Drawing.Size(92, 28);
             this.label1.TabIndex = 27;
             this.label1.Text = "Cedula";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnIngresar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
             this.btnIngresar.FlatAppearance.BorderSize = 0;
-            this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SpringGreen;
-            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(75)))), ((int)(((byte)(61)))));
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(335, 75);
+            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.White;
+            this.btnIngresar.Location = new System.Drawing.Point(346, 109);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(117, 30);
+            this.btnIngresar.Size = new System.Drawing.Size(117, 35);
             this.btnIngresar.TabIndex = 26;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -87,16 +94,20 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(75)))), ((int)(((byte)(61)))));
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(49, 539);
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(33, 555);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(127, 40);
+            this.btnRegistrar.Size = new System.Drawing.Size(132, 38);
             this.btnRegistrar.TabIndex = 25;
             this.btnRegistrar.Text = "Registrarse";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
             // 
             // panel1
@@ -113,10 +124,10 @@
             this.panel1.Controls.Add(this.btnTres);
             this.panel1.Controls.Add(this.btnCinco);
             this.panel1.Controls.Add(this.btnSeis);
-            this.panel1.Location = new System.Drawing.Point(75, 129);
+            this.panel1.Location = new System.Drawing.Point(75, 170);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 386);
+            this.panel1.Size = new System.Drawing.Size(320, 353);
             this.panel1.TabIndex = 24;
             // 
             // button1
@@ -230,27 +241,67 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(96, 75);
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(111, 113);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(221, 30);
+            this.txtPassword.Size = new System.Drawing.Size(216, 28);
             this.txtPassword.TabIndex = 23;
             // 
             // txtCedula
             // 
-            this.txtCedula.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(96, 21);
+            this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.Location = new System.Drawing.Point(111, 67);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(221, 30);
+            this.txtCedula.Size = new System.Drawing.Size(216, 28);
             this.txtCedula.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnCerrar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(476, 35);
+            this.panel2.TabIndex = 29;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(413, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(63, 35);
+            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 35);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "LOGIN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 595);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(476, 612);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIngresar);
@@ -258,12 +309,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtCedula);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +341,9 @@
         private System.Windows.Forms.Button btnSeis;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
 

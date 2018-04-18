@@ -68,7 +68,6 @@ namespace Login
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-             
             }
         }
 

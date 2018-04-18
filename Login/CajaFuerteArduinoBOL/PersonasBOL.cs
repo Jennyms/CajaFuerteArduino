@@ -43,9 +43,9 @@ namespace CajaFuerteArduinoBOL
             }
         }
 
-        public bool ingresar(Personas persona,string ruta)
+        public string ingresar(Personas persona,string ruta)
         {
-            bool ingreso;
+            string ingreso;
             ingreso = dal.VerificarUser(persona, ruta);
            
             return ingreso;

@@ -134,6 +134,7 @@ namespace CajaFuerteArduinoDAL
 
         public bool VerificarSiEsta(string cedula, string ruta)
         {
+            bool valor = false;
             try
             {
                 rutaXML = ruta;
@@ -146,16 +147,18 @@ namespace CajaFuerteArduinoDAL
                 foreach (XmlNode item in listaPersonas)
                 {
                     if (item.SelectSingleNode("cedula").InnerText.Equals(cedula))
-                    { 
-                        throw new Exception("El usuario ya existe.");
+                    {
+                        valor = true;
+                        //throw new Exception("El usuario ya existe.");
                     }
                 }
-                return false;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                MessageBox.Show("Se produjo un error", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //throw new Exception(ex.Message);
             }
+            return valor;
         }
         public List<Personas> CargarDatos(string ruta)
         {
@@ -217,9 +220,9 @@ namespace CajaFuerteArduinoDAL
             //MessageBox.Show("Se modifico con exito", "EDICION", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public bool VerificarUser(Personas persona, string ruta)
+        public string VerificarUser(Personas persona, string ruta)
         {
-            bool valor = false;
+            string valor = "";
             string tipo = "";
             try
             {
@@ -240,15 +243,15 @@ namespace CajaFuerteArduinoDAL
 
                 if (tipo.Equals("T"))
                 {
-                    valor = true;
+                    valor = "A";
                 }
                 else if (tipo.Equals("U"))
                 {
-                    valor = false;
+                    valor = "U";
                 }
-                else
+                else if(tipo.Equals(""))
                 {
-                    MessageBox.Show("Usuario o Contraseña invalida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    valor = "N";
                 }
             }
             catch (Exception e)
@@ -256,6 +259,43 @@ namespace CajaFuerteArduinoDAL
                 MessageBox.Show(""+e , "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            return valor;
+        }
+
+        public bool VerificarEstado(String cedula, string ruta)
+        {
+            bool valor = false;
+            string estado;
+            try
+            {
+                rutaXML = ruta;
+                doc.Load(rutaXML);
+
+                XmlNode personas = doc.DocumentElement;
+
+                XmlNodeList listaPersonas = doc.SelectNodes("usuario/Datosusuario");
+
+                foreach (XmlNode item in listaPersonas)
+                {
+                    if (item.SelectSingleNode("cedula").InnerText.Equals(cedula)) 
+                    {
+                        estado = item.SelectSingleNode("estado").InnerText;
+                        if (estado.Equals("Activo"))
+                        {
+                            valor = true;
+                        }
+                        else
+                        {
+                            valor = false;
+                        }
+                         
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error: " + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return valor;
         }
     }  
