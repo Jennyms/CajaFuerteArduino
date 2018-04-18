@@ -298,5 +298,37 @@ namespace CajaFuerteArduinoDAL
             }
             return valor;
         }
+
+        public void RegistrarIntento(Personas datos, string fecha, string hora, string ruta)
+        {
+            doc.Load(ruta);
+
+            XmlNode intento = CrearIntento(datos, fecha, hora);
+
+            XmlNode nodoRaiz = doc.DocumentElement;
+
+            nodoRaiz.InsertAfter(intento, nodoRaiz.LastChild);
+
+            doc.Save(ruta);
+        }
+
+        public XmlNode CrearIntento(Personas datos, string fecha, string hora)
+        {
+            XmlNode intento = doc.CreateElement("Intento_User");
+
+            XmlElement id = doc.CreateElement("ID");
+            id.InnerText = datos.Cedula.ToString();
+            intento.AppendChild(id);
+
+            XmlElement date = doc.CreateElement("DATE");
+            date.InnerText = fecha;
+            intento.AppendChild(date);
+
+            XmlElement time = doc.CreateElement("TIME");
+            time.InnerText = hora;
+            intento.AppendChild(time);
+
+            return intento;
+        }
     }  
 }

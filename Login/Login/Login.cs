@@ -156,7 +156,7 @@ namespace Login
 
         public void registroIntentos(Personas persona, string fecha, string hora)
         {
-
+            dal.RegistrarIntento(persona, fecha, hora, ruta2);
         }
 
         private void Ingresar()
