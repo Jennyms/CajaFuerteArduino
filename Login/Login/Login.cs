@@ -76,6 +76,7 @@ namespace Login
         {
             try
             {
+                string ingreso = "";
                 string valor = "";
                 bool estado = false;
                 persona.Cedula = Convert.ToInt32(txtCedula.Text);
@@ -99,7 +100,8 @@ namespace Login
 
                         if (valor.Equals("A"))
                         {
-                            registroIntentos(persona, fecha, hora);
+                            ingreso = "T";
+                            RegistroIntentos(persona, fecha, hora, ingreso);
 
                             this.Hide();
                             Admin administrador = new Admin();
@@ -107,17 +109,21 @@ namespace Login
                         }
                         else if (valor.Equals("U"))
                         {
-                            registroIntentos(persona, fecha, hora);
+                            ingreso = "T";
+                            RegistroIntentos(persona, fecha, hora, ingreso);
 
                             MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
+
+                            //Acceso a el arduino 
                         }
                         else if (valor.Equals("N"))
                         {
+                            ingreso = "F";
                             bool verificar = dal.VerificarSiEsta(cedula, ruta);
 
                             if (verificar.Equals(true))
                             {
-                                registroIntentos(persona, fecha, hora);
+                                RegistroIntentos(persona, fecha, hora, ingreso);
                             }
 
                             MessageBox.Show("Usuario o Contraseña invalida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -154,9 +160,9 @@ namespace Login
             }
         }
 
-        public void registroIntentos(Personas persona, string fecha, string hora)
+        public void RegistroIntentos(Personas persona, string fecha, string hora, string ingreso)
         {
-            dal.RegistrarIntento(persona, fecha, hora, ruta2);
+            dal.RegistrarIntento(persona, fecha, hora, ingreso, ruta2);
         }
 
         private void Ingresar()

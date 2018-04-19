@@ -299,11 +299,11 @@ namespace CajaFuerteArduinoDAL
             return valor;
         }
 
-        public void RegistrarIntento(Personas datos, string fecha, string hora, string ruta)
+        public void RegistrarIntento(Personas datos, string fecha, string hora, string ingreso, string ruta)
         {
             doc.Load(ruta);
 
-            XmlNode intento = CrearIntento(datos, fecha, hora);
+            XmlNode intento = CrearIntento(datos, fecha, hora, ingreso);
 
             XmlNode nodoRaiz = doc.DocumentElement;
 
@@ -312,9 +312,9 @@ namespace CajaFuerteArduinoDAL
             doc.Save(ruta);
         }
 
-        public XmlNode CrearIntento(Personas datos, string fecha, string hora)
+        public XmlNode CrearIntento(Personas datos, string fecha, string hora, string ingreso)
         {
-            XmlNode intento = doc.CreateElement("Intento_User");
+            XmlNode intento = doc.CreateElement("Intentos");
 
             XmlElement id = doc.CreateElement("ID");
             id.InnerText = datos.Cedula.ToString();
@@ -328,7 +328,78 @@ namespace CajaFuerteArduinoDAL
             time.InnerText = hora;
             intento.AppendChild(time);
 
+            XmlElement acceso = doc.CreateElement("ACCESS");
+            acceso.InnerText = ingreso;
+            intento.AppendChild(acceso);
+
             return intento;
+        }
+
+        public List<object> Reporte1()
+        {
+            List<object> EstadoUsers = new List<object>();
+
+            try
+            {
+                rutaXML = "Usuarios.xml";
+                doc.Load(rutaXML);
+
+                XmlNode personas = doc.DocumentElement;
+
+                XmlNodeList listaPersonas = doc.SelectNodes("usuario/Datosusuario");
+
+                foreach (XmlNode item in listaPersonas)
+                {
+                    if (item.SelectSingleNode("estado").InnerText.Equals("Activo") || item.SelectSingleNode("estado").InnerText.Equals("Bloqueado"))
+                    {
+                        EstadoUsers.Add(item.SelectSingleNode("estado").InnerText);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error: " + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return EstadoUsers;
+        }
+
+        public List<object> Reporte2(string fecha1, string fecha2)
+        {
+            List<object> Users_Fechas = new List<object>();
+            DateTime fecha;
+            DateTime Fecha3 = Convert.ToDateTime(fecha1);
+            DateTime Fecha4 = Convert.ToDateTime(fecha2);
+            try
+            {
+                rutaXML = "Intentos.xml";
+                doc.Load(rutaXML);
+
+                XmlNode personas = doc.DocumentElement;
+
+                XmlNodeList listaPersonas = doc.SelectNodes("IntentosUser/Intentos");
+
+                foreach (XmlNode item in listaPersonas)
+                {
+                    if (item.SelectSingleNode("ACCESS").InnerText.Equals("T") || item.SelectSingleNode("ACCESS").InnerText.Equals("F"))
+                    {
+                        fecha = Convert.ToDateTime(item.SelectSingleNode("DATE").InnerText);
+                        
+                        if(fecha.CompareTo(Fecha3) >= 0)
+                        {
+                            if(fecha.CompareTo(Fecha4) <= 0)
+                            {
+                                Users_Fechas.Add(item.SelectSingleNode("ACCESS").InnerText);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error: " + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return Users_Fechas;
         }
     }  
 }
