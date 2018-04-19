@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CajaFuerteArduinoENL;
 using CajaFuerteArduinoBOL;
 using CajaFuerteArduinoDAL;
+using System.IO.Ports;
 
 namespace Login
 {
@@ -25,6 +26,9 @@ namespace Login
         private string ruta = "Usuarios.xml";
         private string ruta2 = "Intentos.xml";
         private TextBox txtClick;
+        private ConexionArduinoDAL arduino;
+       
+
         public Login()
         {
             InitializeComponent();
@@ -39,7 +43,13 @@ namespace Login
             horaActual = DateTime.Now.ToString("hh:mm:ss");
             bol.CrearArchivo(ruta2, "IntentosUser");
             txtClick = txtCedula;
+            arduino = new ConexionArduinoDAL();
+            arduino.init();
+            arduino.enviarOpcion("b");//cerrada
+            arduino.CerrarAbrirServo(90);
+      
         }
+       
 
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -77,6 +87,7 @@ namespace Login
 
                         if (valor.Equals("A"))
                         {
+                            intentos = 0;
                             ingreso = "T";
                             RegistroIntentos(persona, fechaActual, horaActual, ingreso);
 
@@ -86,11 +97,14 @@ namespace Login
                         }
                         else if (valor.Equals("U"))
                         {
+                            intentos = 0;
                             ingreso = "T";
                             RegistroIntentos(persona, fechaActual, horaActual, ingreso);
 
-                            MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
-
+                            //MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
+                        
+                            arduino.enviarOpcion("a");//abrir
+                            arduino.CerrarAbrirServo(0);
                             //Acceso a el arduino 
                         }
                         else if (valor.Equals("N"))
@@ -199,6 +213,12 @@ namespace Login
         private void button3_Click(object sender, EventArgs e)
         {
             Ingresar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            arduino.enviarOpcion("b");//cerrada
+            arduino.CerrarAbrirServo(90);
         }
     }
 }
