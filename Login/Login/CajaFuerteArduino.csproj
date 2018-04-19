@@ -139,5 +139,17 @@
   <ItemGroup>
     <None Include="Resources\icono_check.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retroceso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teclado2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
