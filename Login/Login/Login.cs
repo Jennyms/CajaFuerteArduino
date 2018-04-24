@@ -100,12 +100,16 @@ namespace Login
                             intentos = 0;
                             ingreso = "T";
                             RegistroIntentos(persona, fechaActual, horaActual, ingreso);
-
+                            //Acceso a el arduino 
                             //MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
-                        
+
                             arduino.enviarOpcion("a");//abrir
                             arduino.CerrarAbrirServo(0);
-                            //Acceso a el arduino 
+
+                            //llamar ventana cerrar
+                            this.Hide();
+                            CerrarCaja abrir = new CerrarCaja();
+                            abrir.Show();
                         }
                         else if (valor.Equals("N"))
                         {
@@ -217,8 +221,8 @@ namespace Login
 
         private void button4_Click(object sender, EventArgs e)
         {
-            arduino.enviarOpcion("b");//cerrada
-            arduino.CerrarAbrirServo(90);
+            //arduino.enviarOpcion("b");//cerrada
+            //arduino.CerrarAbrirServo(90);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace CajaFuerteArduinoDAL
         public void init()
         {
             serialPort = new SerialPort();
-            serialPort.PortName = "COM5";
+            serialPort.PortName = "COM3";
             serialPort.BaudRate = 9600;
 
             try

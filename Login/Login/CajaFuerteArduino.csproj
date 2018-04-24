@@ -52,6 +52,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CerrarCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CerrarCaja.Designer.cs">
+      <DependentUpon>CerrarCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatosUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CerrarCaja.resx">
+      <DependentUpon>CerrarCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatosUsuarios.resx">
       <DependentUpon>DatosUsuarios.cs</DependentUpon>
@@ -150,6 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\euro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dolar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
