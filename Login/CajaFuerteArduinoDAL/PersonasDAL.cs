@@ -36,7 +36,8 @@ namespace CajaFuerteArduinoDAL
             }
             catch (Exception e)
             {
-                throw new Exception("Error al crear el archivo xml."+e);
+                //throw new Exception("Error al crear el archivo xml."+e);
+                MessageBox.Show("Error al crear el archivo xml." + e, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -63,17 +64,17 @@ namespace CajaFuerteArduinoDAL
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                //throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
 
         private XmlNode CrearPersona(Personas personas)
         {
+            XmlNode usuario = doc.CreateElement("Datosusuario");
             try
             {
-                XmlNode usuario = doc.CreateElement("Datosusuario");
-
                 XmlElement xCed = doc.CreateElement("cedula");
                 xCed.InnerText = personas.Cedula.ToString();
                 usuario.AppendChild(xCed);
@@ -97,13 +98,15 @@ namespace CajaFuerteArduinoDAL
                 XmlElement xTipo = doc.CreateElement("tipo");
                 xTipo.InnerText = personas.Tipo.ToString();
                 usuario.AppendChild(xTipo);
-
-                return usuario;
+       
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al crear usuario."+ex);
+                //throw new Exception("Error al crear usuario."+ex);
+                MessageBox.Show("Error al crear usuario." + ex, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            return usuario;
         }
 
         public bool VerificarClave(int clave, string ruta)
@@ -124,12 +127,15 @@ namespace CajaFuerteArduinoDAL
                         throw new Exception("Clave invalida.");
                     }
                 }
-                return false;
+                
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                //throw new Exception(ex.Message);
+                MessageBox.Show(ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            return false;
         }
 
         public bool VerificarSiEsta(string cedula, string ruta)
@@ -162,11 +168,11 @@ namespace CajaFuerteArduinoDAL
         }
         public List<Personas> CargarDatos(string ruta)
         {
+            List<Personas> personas = new List<Personas>();
+            personas.Clear();
+            Personas persona;
             try
             {
-                List<Personas> personas = new List<Personas>();
-                personas.Clear();
-                Personas persona;
                 rutaXML = ruta;
                 doc.Load(rutaXML);
 
@@ -186,12 +192,14 @@ namespace CajaFuerteArduinoDAL
                     persona.Tipo = usuarios.SelectSingleNode("tipo").InnerText;
                     personas.Add(persona);
                 }
-                return personas;
+                //return personas;
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al cargar usuarios."+ex);
+                MessageBox.Show("Error al cargar usuarios." + ex, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            return personas;
         }
 
         public Label modificarPersona(Personas persona, string archivo)

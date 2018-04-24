@@ -101,12 +101,11 @@ namespace Login
                             ingreso = "T";
                             RegistroIntentos(persona, fechaActual, horaActual, ingreso);
                             //Acceso a el arduino 
-                            //MessageBox.Show("Ingreso a el arduino", "", MessageBoxButtons.OK);
 
                             arduino.enviarOpcion("a");//abrir
                             arduino.CerrarAbrirServo(0);
 
-                            //llamar ventana cerrar
+                            //llamar ventana cerrar la caja
                             this.Hide();
                             CerrarCaja abrir = new CerrarCaja();
                             abrir.Show();
