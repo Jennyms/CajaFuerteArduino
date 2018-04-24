@@ -91,9 +91,10 @@ namespace Login
                             ingreso = "T";
                             RegistroIntentos(persona, fechaActual, horaActual, ingreso);
 
-                            this.Hide();
+                            ///this.Hide();
                             Admin administrador = new Admin();
-                            administrador.Show();
+                            administrador.ShowDialog();
+
                         }
                         else if (valor.Equals("U"))
                         {
@@ -106,9 +107,9 @@ namespace Login
                             arduino.CerrarAbrirServo(0);
 
                             //llamar ventana cerrar la caja
-                            this.Hide();
-                            CerrarCaja abrir = new CerrarCaja();
-                            abrir.Show();
+                            //this.Hide();
+                            //CerrarCaja abrir = new CerrarCaja();
+                            //abrir.Show();
                         }
                         else if (valor.Equals("N"))
                         {
@@ -166,9 +167,10 @@ namespace Login
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             Register registro = new Register();
-            registro.Show();
+            registro.ShowDialog ();
         }
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
@@ -178,9 +180,9 @@ namespace Login
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Register registrar = new Register();
-            registrar.Show();
+            registrar.ShowDialog();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -222,6 +224,12 @@ namespace Login
         {
             //arduino.enviarOpcion("b");//cerrada
             //arduino.CerrarAbrirServo(90);
+        }
+
+        private void btnCerrarCuenta_Click(object sender, EventArgs e)
+        {
+            arduino.enviarOpcion("b");//cerrada
+            arduino.CerrarAbrirServo(90);
         }
     }
 }

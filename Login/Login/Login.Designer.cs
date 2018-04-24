@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,8 @@
             this.btnTres = new System.Windows.Forms.Button();
             this.btnCinco = new System.Windows.Forms.Button();
             this.btnSeis = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCerrarCuenta = new System.Windows.Forms.Button();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +89,7 @@
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(33, 555);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(132, 38);
             this.btnRegistrar.TabIndex = 25;
@@ -99,7 +101,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(111, 113);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.ReadOnly = true;
@@ -112,7 +114,7 @@
             // 
             this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(111, 66);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.ReadOnly = true;
             this.txtCedula.Size = new System.Drawing.Size(216, 28);
@@ -193,7 +195,7 @@
             this.button3.ForeColor = System.Drawing.Color.Transparent;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(36, 284);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(68, 59);
             this.button3.TabIndex = 17;
@@ -210,7 +212,7 @@
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.Image = global::Login.Properties.Resources.retroceso;
             this.button2.Location = new System.Drawing.Point(215, 284);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 59);
             this.button2.TabIndex = 16;
@@ -329,24 +331,29 @@
             // 
             this.btnSeis.Font = new System.Drawing.Font("Stencil", 18F);
             this.btnSeis.Location = new System.Drawing.Point(215, 124);
-            this.btnSeis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSeis.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeis.Name = "btnSeis";
             this.btnSeis.Size = new System.Drawing.Size(68, 55);
             this.btnSeis.TabIndex = 15;
             this.btnSeis.Text = "6";
             this.btnSeis.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
-            // button4
+            // btnCerrarCuenta
             // 
-            this.button4.Location = new System.Drawing.Point(173, 555);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "cerrar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnCerrarCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.btnCerrarCuenta.FlatAppearance.BorderSize = 0;
+            this.btnCerrarCuenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(10)))), ((int)(((byte)(60)))));
+            this.btnCerrarCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(75)))), ((int)(((byte)(61)))));
+            this.btnCerrarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarCuenta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarCuenta.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarCuenta.Location = new System.Drawing.Point(205, 555);
+            this.btnCerrarCuenta.Name = "btnCerrarCuenta";
+            this.btnCerrarCuenta.Size = new System.Drawing.Size(191, 38);
+            this.btnCerrarCuenta.TabIndex = 31;
+            this.btnCerrarCuenta.Text = "Cerrar Cuenta";
+            this.btnCerrarCuenta.UseVisualStyleBackColor = false;
+            this.btnCerrarCuenta.Click += new System.EventHandler(this.btnCerrarCuenta_Click);
             // 
             // Login
             // 
@@ -354,7 +361,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(476, 612);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnCerrarCuenta);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -363,7 +370,7 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtCedula);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -398,7 +405,8 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCerrarCuenta;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
 

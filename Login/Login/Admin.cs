@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CajaFuerteArduinoDAL;
 
 namespace Login
 {
     public partial class Admin : Form
     {
+        private ConexionArduinoDAL arduino;
+
         public Admin()
         {
             InitializeComponent();
+            
+            //arduino.enviarOpcion("b");//cerrada
+            //arduino.CerrarAbrirServo(90);
         }
 
         private void InfoCarros(object formHija)
@@ -67,9 +73,12 @@ namespace Login
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login regresar = new Login();
-            regresar.Show();
+            this.Dispose();
+            //arduino = new ConexionArduinoDAL();
+            //arduino.cerrarPuerto();
+            //this.Hide();
+            //Login regresar = new Login();
+            //regresar.Show();
         }
     }
 }

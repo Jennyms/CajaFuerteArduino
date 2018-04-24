@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Reporte_1 = new System.Windows.Forms.TabPage();
             this.Grafico_1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -48,22 +45,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Fecha1 = new System.Windows.Forms.DateTimePicker();
             this.Grafico_2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Reporte_3 = new System.Windows.Forms.TabPage();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.Reporte_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grafico_1)).BeginInit();
             this.Reporte_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grafico_2)).BeginInit();
-            this.Reporte_3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Reporte_1);
             this.tabControl1.Controls.Add(this.Reporte_2);
-            this.tabControl1.Controls.Add(this.Reporte_3);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.HotTrack = true;
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
@@ -86,16 +78,16 @@
             // 
             // Grafico_1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.Grafico_1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.Grafico_1.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.Grafico_1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Grafico_1.Legends.Add(legend1);
             this.Grafico_1.Location = new System.Drawing.Point(6, 6);
             this.Grafico_1.Name = "Grafico_1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.Grafico_1.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.Grafico_1.Series.Add(series1);
             this.Grafico_1.Size = new System.Drawing.Size(923, 406);
             this.Grafico_1.TabIndex = 0;
             this.Grafico_1.Text = "chart1";
@@ -179,45 +171,19 @@
             // 
             // Grafico_2
             // 
-            chartArea4.Name = "ChartArea1";
-            this.Grafico_2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.Grafico_2.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.Grafico_2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.Grafico_2.Legends.Add(legend2);
             this.Grafico_2.Location = new System.Drawing.Point(6, 39);
             this.Grafico_2.Name = "Grafico_2";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.Grafico_2.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.Grafico_2.Series.Add(series2);
             this.Grafico_2.Size = new System.Drawing.Size(923, 370);
             this.Grafico_2.TabIndex = 0;
             this.Grafico_2.Text = "chart2";
-            // 
-            // Reporte_3
-            // 
-            this.Reporte_3.Controls.Add(this.chart3);
-            this.Reporte_3.Location = new System.Drawing.Point(4, 29);
-            this.Reporte_3.Name = "Reporte_3";
-            this.Reporte_3.Size = new System.Drawing.Size(935, 415);
-            this.Reporte_3.TabIndex = 2;
-            this.Reporte_3.Text = "Reporte 3";
-            this.Reporte_3.UseVisualStyleBackColor = true;
-            // 
-            // chart3
-            // 
-            chartArea6.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart3.Legends.Add(legend6);
-            this.chart3.Location = new System.Drawing.Point(6, 6);
-            this.chart3.Name = "chart3";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart3.Series.Add(series6);
-            this.chart3.Size = new System.Drawing.Size(923, 403);
-            this.chart3.TabIndex = 1;
-            this.chart3.Text = "chart3";
             // 
             // Reportes
             // 
@@ -236,8 +202,6 @@
             this.Reporte_2.ResumeLayout(false);
             this.Reporte_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grafico_2)).EndInit();
-            this.Reporte_3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,10 +211,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Reporte_1;
         private System.Windows.Forms.TabPage Reporte_2;
-        private System.Windows.Forms.TabPage Reporte_3;
         private System.Windows.Forms.DataVisualization.Charting.Chart Grafico_1;
         private System.Windows.Forms.DataVisualization.Charting.Chart Grafico_2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.DateTimePicker Fecha1;
         private System.Windows.Forms.DateTimePicker Fecha2;
         private System.Windows.Forms.Label label2;

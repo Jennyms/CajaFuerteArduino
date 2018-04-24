@@ -59,6 +59,8 @@ namespace CajaFuerteArduinoDAL
                         nodoRaiz.InsertAfter(person, nodoRaiz.LastChild);
 
                         doc.Save(rutaXML);
+
+                        MessageBox.Show("Se registro correctamente. ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }

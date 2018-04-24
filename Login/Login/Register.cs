@@ -37,9 +37,10 @@ namespace Login
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login principal = new Login();
-            principal.Show();
+            //this.Hide();
+            //Login principal = new Login();
+            //principal.Show();
+            this.Dispose();
         }
 
         public void Guardar()
@@ -63,6 +64,10 @@ namespace Login
                 persona.Tipo = tipo;
                 ruta = "Usuarios.xml";
                 bol.VerificarUsuario(persona, ruta);
+
+                txtCedula.Text = "";
+                txtClave.Text = "";
+                txtNombre.Text = "";
 
             }
             catch (Exception ex)

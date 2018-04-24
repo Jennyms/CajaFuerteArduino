@@ -33,7 +33,6 @@ namespace CajaFuerteArduinoDAL
         }
         public void enviarOpcion(string letra)
         {
-
             serialPort.Write(letra);
             
         }
